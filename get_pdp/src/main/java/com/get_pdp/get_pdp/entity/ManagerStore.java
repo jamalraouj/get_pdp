@@ -8,10 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 @Setter
 @Getter
-public class ManagerStore {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class ManagerStore extends UserEntity {
+
     @OneToOne
     private Store store;
 
@@ -19,10 +17,7 @@ public class ManagerStore {
         this.store = store;
     }
 
-    public ManagerStore(Long id, Store store) {
-        this.id = id;
-        this.store = store;
-    }
+
 
     public ManagerStore() {
     }
